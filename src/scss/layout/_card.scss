@@ -1,0 +1,106 @@
+.card{
+    background-color: $colorAzulPalido;
+    border-radius: 2rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    font-family: $fuentePrincipal;
+    gap: 1rem;
+    box-shadow: 2rem 2rem 2rem .4rem rgba(0, 0, 0, 0.151);
+    margin: 0 2rem;
+    &__img{
+        width: 100%;
+        position: relative;
+        display: flex;
+        img{
+            border-radius: 1rem;
+        }
+
+        .img-hover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $colorCyanBg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            opacity: 0;
+            transition: opacity .4s ease;
+            img{
+                width: 10rem;
+            }
+        }
+        &:hover{
+            .img-hover{
+                opacity: 1;
+                cursor: pointer;
+
+                
+            }
+        }
+    }
+    &__body{
+        color: white;
+        &__title{
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+            &:hover{
+                color: $colorCyan;
+                cursor: pointer;
+            }
+        }
+        &__description{
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: rgb(209, 209, 209);
+        }
+        &__stats{
+            display: flex;
+            justify-content: space-between;
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.2rem;
+                &.etheurum{
+                    color: $colorCyan;
+
+                    
+                    
+                }
+                img{
+                    width: 2rem;
+                }
+            }
+        }
+    }
+    &__footer{
+        border-top: .1rem solid $colorAzulLinea;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: rgb(179, 178, 178);
+        padding-top: .5rem;
+        img{
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid $colorBlanco;
+            border-radius: 50%;
+        }
+        .user-name{
+            font-weight: 300;
+            color: white;
+            &:hover{
+                color: $colorCyan;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
